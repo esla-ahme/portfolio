@@ -34,8 +34,8 @@ const config: Config = {
         monteserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
-        main: "#00796b",
-        bgDark: "#0A1a26",
+        main: "#00897b",
+        bgDark: "#0A1625",
         bgLight: "#e3f1f1",
         textLight: "#c9d9e9",
         textDark: "#8892b0",

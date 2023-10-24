@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -21,3 +16,15 @@
   }
 }
 
+
+main::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 100vw 150px rgba(255, 255, 255, 0.25);
+}
