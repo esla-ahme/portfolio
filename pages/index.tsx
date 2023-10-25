@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Experience from "@/components/Experience/Experience";
 import HeroSection from "@/components/Hero/HeroSection";
 import Navbar from "@/components/Navbar/navbar";
 import Head from "next/head";
@@ -17,6 +18,7 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <About />
+        <Experience />
       </main>
     </>
   );

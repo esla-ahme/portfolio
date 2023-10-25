@@ -16,9 +16,8 @@ const tech = [
 const About: React.FC = () => {
   return (
     <section
-      className=" p-4 lg:p-8 w-full
-      from-bgDark to-transparent text-textLight 
-      min-h-screen    
+      className=" p-4 mdl:p-8 w-full
+ text-textLight     
     "
       style={{
         background:
@@ -27,11 +26,11 @@ const About: React.FC = () => {
     >
       <SectionTitle title="About Me" />
 
-      <div className="flex flex-col-reverse  lg:flex-row  items-center justify-center">
-        <div className="w-full lg:w-1/2  p-4">
+      <div className="flex flex-col-reverse  mdl:flex-row  items-center justify-center">
+        <div className="w-full mdl:w-3/4  p-4">
           <p className="font-light text-bgLight/75">
             Hi, I'm Eslam Ahmed, a{" "}
-            <span className="font-semibold text-textLight lg:text-lg">
+            <span className="font-semibold text-textLight mdl:text-mdl">
               web developer
             </span>{" "}
             with over a year of experience. I specialize in building web

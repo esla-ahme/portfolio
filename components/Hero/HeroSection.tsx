@@ -6,7 +6,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div className="flex  w-full  items-center">
-      <div className="lg:w-2/3 px-4 lg:px-16 flex flex-col justify-center lg:max-w-containerSmall min-h-[90vh] ">
+      <div className="mdl:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall min-h-[90vh] ">
         <h3 className="text-xl my-4">
           {/* <motion.span
           initial={{
@@ -21,7 +21,7 @@ const HeroSection = () => {
         </motion.span> */}
           Hello there, I'm
         </h3>
-        <h1 className="text-5xl lg:text-6xl font-bold font-inter text-main">
+        <h1 className="text-5xl mdl:text-6xl font-bold font-inter text-main">
           Eslam Ahmed
         </h1>
         <TypingWriter
@@ -31,10 +31,10 @@ const HeroSection = () => {
             "React Developer",
           ]}
           loop={true}
-          classes="text-2xl lg:text-4xl"
+          classes="text-2xl mdl:text-4xl"
         />
         <p
-          className="lg:text-lg mt-4 mb-6 text-textLight/75 whitespace-break-spaces
+          className="mdl:text-lg mt-4 mb-6 text-textLight/75 whitespace-break-spaces
         "
         >
           I'm an experienced web developer with a solid foundation in both
@@ -134,7 +134,7 @@ const HeroSection = () => {
             type: "tween",
           },
         }}
-        className="py-20 mr-8 m-auto hidden lg:block "
+        className="py-20 mr-8 m-auto hidden mdl:block "
       >
         <Image
           src="/images/hero.svg"
