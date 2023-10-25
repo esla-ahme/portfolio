@@ -18,10 +18,10 @@ export default function Document() {
           property="og:description"
           content="Frontend Engineer specializing in React, Vue, GraphQL, and more."
         />
-        <meta property="og:image" content="/eslam.jpg" />{" "}
+        <meta property="og:image" content="/images/eslam.jpg" />{" "}
         {/* Reference to the image in the public folder */}
         {/* Twitter */}
-        <meta property="twitter:card" content="/eslam.jpg" />
+        <meta property="twitter:card" content="/images/eslam.jpg" />
         <meta property="twitter:url" content="https://your-portfolio-url.com" />
         <meta
           property="twitter:title"
@@ -31,7 +31,7 @@ export default function Document() {
           property="twitter:description"
           content="Frontend Engineer specializing in React, Vue, GraphQL, and more."
         />
-        <meta property="twitter:image" content="/eslam.jpg" />
+        <meta property="twitter:image" content="/images/eslam.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

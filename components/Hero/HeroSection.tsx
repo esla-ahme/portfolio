@@ -6,7 +6,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div className="flex  w-full  items-center">
-      <div className="lg:w-2/3 px-4 lg:px-16 py-20 lg:max-w-containerSmall ">
+      <div className="lg:w-2/3 px-4 lg:px-16 flex flex-col justify-center lg:max-w-containerSmall min-h-[90vh] ">
         <h3 className="text-xl my-4">
           {/* <motion.span
           initial={{
