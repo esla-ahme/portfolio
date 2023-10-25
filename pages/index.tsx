@@ -1,3 +1,4 @@
+import HeroSection from "@/components/Hero/HeroSection";
 import Navbar from "@/components/Navbar/navbar";
 import Head from "next/head";
 
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <main className="w-full h-screen overflow-x-hidden overflow-y-scroll font-monteserrat bg-bgDark text-textLight ">
         <Navbar />
+        <HeroSection />
       </main>
     </>
   );

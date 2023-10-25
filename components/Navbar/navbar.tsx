@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full shadow-3xl h-20 px-4 bg-bgDark/75 flex justify-between items-center ${
+      className={`w-full shadow-3xl h-20 px-2 lg:px-8 bg-bgDark/75 flex justify-between items-center ${
         isSticky ? "sticky top-0 z-50" : ""
       }`}
       style={{ backdropFilter: "blur(10px)" }}
@@ -74,7 +74,22 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="mdl:hidden">
-        <Icon onClick={toggleSideBar} />
+        {showSideBar && (
+          <div
+            className="
+        menu_backdrop fixed top-20 left-0 bg-bgDark/50 backdrop-blur-md cursor-pointer 
+        w-screen h-screen
+        "
+            onClick={
+              showSideBar
+                ? () => {
+                    setShowSideBar(false);
+                  }
+                : () => {}
+            }
+          ></div>
+        )}
+        <Icon onClick={toggleSideBar} opened={showSideBar} />
         <AnimatePresence>
           {showSideBar && (
             <motion.ul
@@ -134,9 +149,20 @@ const Navbar = () => {
                   ))}
                 </div>
               </motion.li>
-              <p className="w-full text-center text-sm tracking-widest font-extralight">
-                EslamAhmed9861@gmail.com
-              </p>
+              <motion.li
+                whileHover={{
+                  y: -5,
+                  transition: { duration: 0.2, delay: 0 },
+                }}
+                className="mt-2"
+              >
+                <a
+                  href="mailto: eslamahmed9861@gmail.com "
+                  className="w-full hover:text-main inline-block text-center text-sm tracking-widest "
+                >
+                  EslamAhmed9861@gmail.com
+                </a>
+              </motion.li>
             </motion.ul>
           )}
         </AnimatePresence>
