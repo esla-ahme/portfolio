@@ -14,7 +14,7 @@ const Projects = () => {
       <SectionTitle title="Projects" />
       <div className="flex  flex-wrap">
         {projectsData.map((project, index) => (
-          <Card key={index + project.title} {...project} />
+          <Card key={index} {...project} />
         ))}
       </div>
     </div>

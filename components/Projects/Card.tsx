@@ -6,14 +6,14 @@
  */
 import React from "react";
 import { motion } from "framer-motion";
-import Tag from "./Tag";
+import Tag from "../Tag";
 interface Props {
   title: string;
   description: string;
   role: string[];
   techStack: string[];
   link: string;
-  key: string;
+  key: number;
 }
 const Card = (props: Props) => {
   const [sign, setSign] = React.useState(props.key % 2 === 0 ? 1 : -1);
@@ -29,7 +29,7 @@ const Card = (props: Props) => {
       className="
       w-full
         max-w-containerSmall
-        mdl:p-16
+        mdl:px-16 mdl:py-8 
         mx-2
       m-auto
       cursor-pointer

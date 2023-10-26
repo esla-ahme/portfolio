@@ -2,6 +2,7 @@ import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
 import HeroSection from "@/components/Hero/HeroSection";
 import Navbar from "@/components/Navbar/navbar";
+import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import Projects from "@/components/Projects/Projects";
 import Head from "next/head";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <OtherProjects />
       </main>
     </>
   );

@@ -46,7 +46,6 @@ const Card = ({
           opacity: 1,
           transition: {
             duration: 0.5,
-            delay: key * 0.5,
           },
         }}
         viewport={{ once: true }}

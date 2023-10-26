@@ -6,7 +6,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div className="flex  w-full  items-center">
-      <div className="mdl:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall min-h-[90vh] ">
+      <div className="lg:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall h-[90vh] ">
         <h3 className="text-xl my-4">
           {/* <motion.span
           initial={{
@@ -134,14 +134,14 @@ const HeroSection = () => {
             type: "tween",
           },
         }}
-        className="py-20 mr-8 m-auto hidden mdl:block "
+        className="py-20 mr-8 m-auto hidden  lg:block "
       >
         <Image
           src="/images/hero.svg"
           alt="hero"
-          className="flex-grow"
-          width={500}
-          height={500}
+          className="flex-grow "
+          width={400}
+          height={400}
         />
       </motion.div>
     </div>
