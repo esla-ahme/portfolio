@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tag = ({ name, size = "normal" }: { name: string; size: string }) => {
+const Tag = ({ name, size = "normal" }: { name: string; size?: string }) => {
   const sharedClasses =
     "bg-textLight/10 hover:bg-main py-0.5 hover:text-white duration-200  text-textLight  hover:font-regular";
   const normalClasses = " px-2  text-xs rounded-full border";

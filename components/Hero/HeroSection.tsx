@@ -19,7 +19,7 @@ const HeroSection = () => {
         >
           👋
         </motion.span> */}
-          Hello there, I'm
+          Hello there, I&apos;m
         </h3>
         <h1 className="text-5xl mdl:text-6xl font-bold font-inter text-main">
           Eslam Ahmed
@@ -37,7 +37,7 @@ const HeroSection = () => {
           className="mdl:text-lg mt-4 mb-6 text-textLight/75 whitespace-break-spaces
         "
         >
-          I'm an experienced web developer with a solid foundation in both
+          I&apos;m an experienced web developer with a solid foundation in both
           front-end and back-end development. With over a years of expertise in
           React, Vue and their ecosystem, I focus on creating accessible and
           inclusive web applications that prioritize user satisfaction and

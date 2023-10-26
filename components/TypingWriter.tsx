@@ -36,7 +36,7 @@ const TypingWriter = ({ sentences, loop, classes }: TypingWriterProps) => {
     return () => {
       clearTimeout(timeOut);
     };
-  }, [currentLetter, index, isDeleting]);
+  }, [currentLetter, index, isDeleting, sentences, speed]);
   return (
     <h3 className={`my-4 font-semibold ${classes}`}>
       {currentLetter || ""}

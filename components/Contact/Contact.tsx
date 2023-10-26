@@ -22,10 +22,10 @@ const Contact = () => {
             mb-4
             "
         >
-          I'm always excited to connect with fellow professionals and explore
-          new opportunities. Whether you have a project idea, a job opportunity,
-          or just want to say hello, don't hesitate to reach out. I'd love to
-          hear from you!
+          I&apos;m always excited to connect with fellow professionals and
+          explore new opportunities. Whether you have a project idea, a job
+          opportunity, or just want to say hello, don&apos;t hesitate to reach
+          out. I&apos;d love to hear from you!
           <br />
           <br />
           Feel free to click the buttons below to get in touch with me. You can
@@ -53,7 +53,7 @@ const Contact = () => {
           </Link>
         </div>
         <p className="mt-6 font-semibold">
-          Let's start a conversation and explore how we can work together!
+          Let&apos;s start a conversation and explore how we can work together!
         </p>
       </div>
     </div>

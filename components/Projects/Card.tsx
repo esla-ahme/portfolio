@@ -70,7 +70,7 @@ const Card = (props: Props) => {
       <ul className="flex px-8 py-2 gap-2 flex-wrap">
         {props.techStack.map((tech, index) => (
           <li key={tech}>
-            <Tag name={tech} />
+            <Tag name={tech} size="normal" />
           </li>
         ))}
       </ul>

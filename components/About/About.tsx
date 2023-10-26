@@ -30,7 +30,7 @@ const About: React.FC = () => {
       <div className="flex flex-col-reverse  mdl:flex-row  items-center justify-center">
         <div className="w-full mdl:w-3/4  p-4">
           <p className="font-light text-bgLight/75">
-            Hi, I'm Eslam Ahmed, a{" "}
+            Hi, I&apos;m Eslam Ahmed, a{" "}
             <span className="font-semibold text-textLight mdl:text-mdl">
               web developer
             </span>{" "}
@@ -42,9 +42,10 @@ const About: React.FC = () => {
               B.Sc in Computer Engineering
             </span>
             , graduating in July 2021. My journey began in 2017 when I wrote my
-            first 'Hello World' in good old'C.'Since then, I've dived into
-            various technologies and languages, always striving to learn,
-            achieve perfection, and pay attention to the finer details.
+            first &apos;Hello World&apos; in good old&apos;C.&apos;Since then,
+            I&apos;ve dived into various technologies and languages, always
+            striving to learn, achieve perfection, and pay attention to the
+            finer details.
             <br />
             <br />
             <strong>Some technologies I enjoy working with:</strong>
