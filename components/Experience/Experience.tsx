@@ -12,8 +12,8 @@ const Experience = () => {
   };
   return (
     <div
-      className="
-      
+      id="experience"
+      className="      
      p-4 lg:p-8 w-full"
       style={{
         minHeight: "calc(100vh - 4rem)",

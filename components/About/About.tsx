@@ -16,6 +16,7 @@ const tech = [
 const About: React.FC = () => {
   return (
     <section
+      id="about"
       className=" p-4 mdl:p-8 w-full
  text-textLight     
     "

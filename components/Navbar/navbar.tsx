@@ -29,18 +29,20 @@ const Navbar = () => {
     };
   }, []);
 
-  //   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  //     e.preventDefault();
-  //     const target = e.currentTarget.getAttribute("href");
-  //     const element = document.querySelector(target);
-  //     if (element) {
-  //       const offset = element.getBoundingClientRect().top + window.pageYOffset;
-  //       window.scrollTo({
-  //         top: offset,
-  //         behavior: "smooth",
-  //       });
-  //     }
-  //   };
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    setShowSideBar(false);
+    const id = e.currentTarget.getAttribute("href").slice(1);
+
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  };
 
   return (
     <nav
@@ -62,9 +64,9 @@ const Navbar = () => {
                 key={link.link + index}
               >
                 <Link
-                  href={link.link}
-                  // onClick={handleClick}
+                  href={"#" + link.name.toLocaleLowerCase()}
                   className=" hover:text-main  duration-300 cursor-pointer"
+                  onClick={handleClick}
                 >
                   {link.name}{" "}
                 </Link>
@@ -117,9 +119,9 @@ const Navbar = () => {
                     key={link.link + index}
                   >
                     <Link
-                      href={link.link}
-                      // onClick={handleClick}
+                      href={"#" + link.name.toLocaleLowerCase()}
                       className=" hover:text-main  duration-300 cursor-pointer text-xl my-4"
+                      onClick={handleClick}
                     >
                       {link.name}
                     </Link>

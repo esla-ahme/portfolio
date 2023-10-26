@@ -2,7 +2,11 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html
+      lang="en"
+      className="scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-200 scrollbar-thin scroll-smooth"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <Head>
         {/* Primary Meta Tags */}
         <meta name="title" content="Eslam Ahmed - Software Engineer" />

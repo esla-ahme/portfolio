@@ -38,7 +38,7 @@ const config: Config = {
         bgDark: "#0A1625",
         bgLight: "#e3f1f1",
         textLight: "#c9d9e9",
-        textDark: "#8892b0",
+        textDark: "#485270",
       },
       boxShadow: {
         "3xl": "0 10px 30px -10px rgba(2, 12, 27, 0.5)",

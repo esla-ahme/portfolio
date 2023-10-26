@@ -1,10 +1,10 @@
 const navlinks = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "experience", link: "/experience" },
-  { name: "Projects", link: "/projects" },
-  { name: "Articles", link: "/articles" },
-  { name: "Contact", link: "/contact" },
+  { name: "Home", link: "#home" },
+  { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
+  { name: "Projects", link: "#projects" },
+  { name: "Articles", link: "#articles" },
+  { name: "Contact", link: "#contact" },
 ];
 export const sociallinks = [
   {
