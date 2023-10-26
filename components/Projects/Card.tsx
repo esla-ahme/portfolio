@@ -1,9 +1,3 @@
-/**
- * 1- title : bold main color
- * 2- description
- * 3- role array
- * 4-tech stack rendered as Tag
- */
 import React from "react";
 import { motion } from "framer-motion";
 import Tag from "../Tag";
@@ -19,7 +13,7 @@ const Card = (props: Props) => {
   const [sign, setSign] = React.useState(props.key % 2 === 0 ? 1 : -1);
   return (
     <motion.div
-      initial={{ opacity: 0, y: "100%" }}
+      initial={{ opacity: 0, y: "100" }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       whileHover={{ y: 4, x: -4, skewX: sign * 0.5, skewY: sign * 0.5 }}

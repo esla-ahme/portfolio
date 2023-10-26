@@ -15,7 +15,6 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { once } from "events";
 interface Props {
   title: string;
   company?: string;
@@ -38,7 +37,7 @@ const Card = ({
     <AnimatePresence>
       <motion.div
         initial={{
-          x: "-100%",
+          x: "-100",
           opacity: 0,
         }}
         whileInView={{

@@ -7,8 +7,12 @@ const Contact = () => {
     <div
       id="contact"
       className="
+      
         p-4 lg:p-8 w-full
      "
+      style={{
+        minHeight: "calc(100vh - 5rem)",
+      }}
     >
       <SectionTitle title="Let's Connect" />
       <div

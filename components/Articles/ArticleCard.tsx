@@ -32,7 +32,7 @@ const ArticleCard = (article: Props) => {
         src={"/images/" + article.image + ".webp"}
         width={400}
         height={400}
-        className="w-full  rounded-md filter brightness-75 group-hover:brightness-100 transition-all duration-500 ease-in-out        "
+        className="w-full object-cover aspect-video  rounded-md filter brightness-75 group-hover:brightness-100 transition-all duration-500 ease-in-out        "
         alt={article.title}
       />
       <div className="p-4 flex flex-col">

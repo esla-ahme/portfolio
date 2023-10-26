@@ -78,28 +78,24 @@ const HeroSection = () => {
 
           <motion.div
             initial={{
-              background: "rgba(255,255,255,0.75)",
-              scale: 0,
+              boxShadow: "0px 0px 0px 0px rgba(124,58,205,0.5)",
             }}
             animate={{
-              background: "rgba(205,255,255,0.0)",
-              scale: 2,
+              x: [-200, 0],
+              transition: {
+                duration: 1,
+                delay: 2,
+              },
             }}
-            transition={{
-              duration: 1,
-              delay: 3,
-              repeat: Infinity,
+            whileInView={{
+              boxShadow: "0px 0px 5px 2px rgba(124,58,205,1)",
+              transition: {
+                duration: 0.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
             }}
-            className="w-2.5 h-2.5  bg-white rounded-full"
-          ></motion.div>
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: -10, opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-              delay: 2,
-            }}
-            className="w-2.5 h-2.5 -mx-2.5 z-10 bg-main rounded-full"
+            className=" w-2.5 h-2.5  bg-textLight rounded-full"
           ></motion.div>
           <motion.a
             href="/resume.pdf"

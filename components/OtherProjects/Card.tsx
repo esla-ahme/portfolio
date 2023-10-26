@@ -4,12 +4,7 @@ import Link from "next/link";
 import Tag from "../Tag";
 import { motion } from "framer-motion";
 import { Edit, ArrowUpRight } from "./Icon";
-/**
- * 1. Project Icon on the left and github link, live link on the right if existed
- * 2. Project Name
- * 3. Project Description
- * 4. Project Tech Stack as Tags
- */
+
 interface Props {
   title: string;
   description: string;
@@ -21,7 +16,7 @@ interface Props {
 const Card = (props: Props) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: "100%" }}
+      initial={{ opacity: 0, y: "100" }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{
         y: -5,
@@ -29,9 +24,7 @@ const Card = (props: Props) => {
         shadow: "0 0 11px rgba(33,33,33,1)",
       }}
       transition={{
-        duration: 0.5,
-        type: "keyframes",
-        times: [0, 0.25, 0.75, 1],
+        duration: 0.25,
       }}
       viewport={{ once: true }}
       className="
