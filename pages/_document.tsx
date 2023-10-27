@@ -14,14 +14,20 @@ export default function Document() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://eslam-ahmed.vercel.app/" />
         <meta property="og:title" content="Eslam Ahmed - Software Engineer" />
-        <meta property="og:image" content="/images/cover.png" />{" "}
+        <meta
+          property="og:image"
+          content="https://eslam-ahmed.vercel.app/images/cover.png"
+        />{" "}
         <meta
           property="og:description"
           content="An experienced web developer passionate about creating accessible and inclusive web applications. With over a year of expertise in React, Vue, and their ecosystem, Eslam specializes in optimizing websites for a top-notch UI/UX and solid SEO. Dive into the details of a developer dedicated to user satisfaction and engagement."
         />
         {/* Reference to the image in the public folder */}
         {/* Twitter */}
-        <meta property="twitter:card" content="/images/cover.png" />
+        <meta
+          property="twitter:card"
+          content="https://eslam-ahmed.vercel.app/images/cover.png"
+        />
         <meta
           property="twitter:url"
           content="https://eslam-ahmed.vercel.app/"
