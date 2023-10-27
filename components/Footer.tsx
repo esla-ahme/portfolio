@@ -23,10 +23,10 @@ const Footer = () => {
       opacity-75
       "
       >
-        <Link href="">
+        <Link href="https://github.com/esla-ahme" target="_blank">
           <Image src="/icons/github.svg" alt="github" width={20} height={20} />
         </Link>
-        <Link href="">
+        <Link href="https://www.linkedin.com/in/eslam0ahmed/" target="_blank">
           <Image
             src="/icons/linkedin.svg"
             alt="linkedin"
@@ -34,7 +34,7 @@ const Footer = () => {
             height={20}
           />
         </Link>
-        <Link href="">
+        <Link href="https://twitter.com/esla_ahme" target="_blank">
           <Image
             src="/icons/twitter.svg"
             alt="twitter"
@@ -42,7 +42,7 @@ const Footer = () => {
             height={20}
           />
         </Link>
-        <Link href="">
+        <Link href="https://eslam-7ot.hashnode.dev/" target="_blank">
           <Image
             src="/icons/hashnode.svg"
             alt="hashnode"

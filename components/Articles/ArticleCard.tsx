@@ -3,6 +3,7 @@ import React from "react";
 import EyeIcon from "./Eye";
 import Tag from "../Tag";
 import { motion } from "framer-motion";
+import Link from "next/link";
 interface Props {
   title: string;
   teaser: string;
@@ -68,9 +69,11 @@ const ArticleCard = (article: Props) => {
             <Tag key={index} name={tag} size="small" />
           ))}
         </div>
-        <button className="bg-textLight/20 hover:bg-main hover:scale-105 duration-500 ease-in-out py-1 px-4 w-1/2 m-auto mt-4 rounded-md ">
-          Read More
-        </button>
+        <Link href={article.link} target="_blank">
+          <button className="bg-textLight/20 hover:bg-main hover:scale-105 duration-500 ease-in-out py-1 px-4 w-1/2 m-auto mt-4 rounded-md ">
+            Read More
+          </button>
+        </Link>
       </div>
     </motion.div>
   );
