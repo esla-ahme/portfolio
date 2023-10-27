@@ -14,7 +14,7 @@ export const sociallinks = [
   },
   {
     name: "Linkedin",
-    link: "https://www.linkedin.com/in/eslm0ahmed/",
+    link: "https://www.linkedin.com/in/eslam0ahmed/",
     icon: "/icons/linkedin.svg",
   },
   {
