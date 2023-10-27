@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth !important;
+}
 * {
-  scroll-margin: 80px;
+  scroll-margin: 60px;
   padding: 0;
     margin: 0;
     box-sizing: border-box;

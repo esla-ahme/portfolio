@@ -29,19 +29,21 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent, id: string) => {
+    console.log(id);
     e.preventDefault();
+    e.stopPropagation();
     setShowSideBar(false);
-    const id = e.currentTarget.getAttribute("href").slice(1);
+    const element = document.getElementById(id.toLocaleLowerCase());
+    const main = document.getElementById("main");
+    const topOffset = element?.offsetTop;
 
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    }
+    console.log(topOffset);
+    main?.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: Number(topOffset) - 40,
+    });
   };
 
   return (
@@ -62,14 +64,11 @@ const Navbar = () => {
                 transition={{ delay: 0.5 + index * 0.1 }}
                 className="mx-4"
                 key={link.link + index}
+                onClick={(e) => handleClick(e, link.name)}
               >
-                <Link
-                  href={"#" + link.name.toLocaleLowerCase()}
-                  className=" hover:text-main  duration-300 cursor-pointer"
-                  onClick={handleClick}
-                >
+                <span className=" hover:text-main  duration-300 cursor-pointer">
                   {link.name}{" "}
-                </Link>
+                </span>
               </motion.li>
             );
           })}
@@ -108,6 +107,7 @@ const Navbar = () => {
               {navlinks.map((link, index) => {
                 return (
                   <motion.li
+                    onClick={(e) => handleClick(e, link.name)}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 100, x: 0 }}
                     transition={{ delay: index * 0.2 }}
@@ -118,13 +118,9 @@ const Navbar = () => {
                     className="p-4"
                     key={link.link + index}
                   >
-                    <Link
-                      href={"#" + link.name.toLocaleLowerCase()}
-                      className=" hover:text-main  duration-300 cursor-pointer text-xl my-4"
-                      onClick={handleClick}
-                    >
+                    <span className=" hover:text-main  duration-300 cursor-pointer text-xl my-4">
                       {link.name}
-                    </Link>
+                    </span>
                   </motion.li>
                 );
               })}

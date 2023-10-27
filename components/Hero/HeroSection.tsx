@@ -5,8 +5,14 @@ import { sociallinks } from "../Navbar/static";
 import Image from "next/image";
 const HeroSection = () => {
   return (
-    <div id="home" className="flex  w-full  items-center">
-      <div className="lg:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall h-[90vh] ">
+    <div
+      id="home"
+      className="flex  w-full  items-center "
+      style={{
+        minHeight: "calc(100vh - 5rem)",
+      }}
+    >
+      <div className="lg:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall  ">
         <h3 className="text-xl my-4">
           {/* <motion.span
           initial={{
@@ -78,10 +84,11 @@ const HeroSection = () => {
 
           <motion.div
             initial={{
+              x: -100,
               boxShadow: "0px 0px 0px 0px rgba(124,58,205,0.5)",
             }}
             animate={{
-              x: [-200, 0],
+              x: [0],
               transition: {
                 duration: 1,
                 delay: 2,

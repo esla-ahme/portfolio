@@ -21,6 +21,7 @@ const About: React.FC = () => {
  text-textLight     
     "
       style={{
+        minHeight: "100vh-4rem",
         background:
           "linear-gradient(0deg, rgba(0,0,0,0) 0%, #0A1625 15%,#0A1625 85%, rgba(0,0,0,0) 100%)",
       }}

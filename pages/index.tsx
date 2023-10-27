@@ -19,7 +19,10 @@ export default function Home() {
           content="Frontend Engineer specializing in React, Vue, GraphQL, and more."
         />
       </Head>
-      <main className="w-full h-screen overflow-x-hidden overflow-y-scroll font-monteserrat bg-bgDark text-textLight ">
+      <main
+        id="main"
+        className="w-full h-screen overflow-x-hidden overflow-y-scroll font-monteserrat bg-bgDark text-textLight "
+      >
         <Navbar />
         <HeroSection />
         <About />
