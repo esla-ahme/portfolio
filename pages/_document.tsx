@@ -10,6 +10,23 @@ export default function Document() {
           name="description"
           content="Eslam Ahmed - Web Developer Portfolio. Over a year of web development experience specializing in creating web platforms, optimizing UI/UX, and ensuring top-notch SEO. Explore my work and experience in React, Next.js, TypeScript, Tailwind CSS, and Framer Motion."
         />
+        <meta name="theme-color" content="#0A1625" />
+        <meta name="author" content="Eslam Ahmed" />
+        <meta
+          name="keywords"
+          content="
+          Eslam, Eslam Ahmed, Software Engineer, javascript developer, frontend developer, web developer, web designer, web developer
+          MERN stack developer"
+        />
+        <meta itemProp="name" content="Eslam Ahmed - Software Engineer" />
+        <meta
+          itemProp="description"
+          content="Eslam Ahmed - Web Developer Portfolio. Over a year of web development experience specializing in creating web platforms, optimizing UI/UX, and ensuring top-notch SEO. Explore my work and experience in React, Next.js, TypeScript, Tailwind CSS, and Framer Motion."
+        />
+        <meta
+          itemProp="image"
+          content="https://eslam-ahmed.vercel.app/images/cover.png"
+        />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://eslam-ahmed.vercel.app/" />
@@ -44,6 +61,7 @@ export default function Document() {
           property="twitter:image"
           content="https://eslam-ahmed.vercel.app/images/cover.png"
         />
+        <link rel="preload" as="image" href="/images/eslam.webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
