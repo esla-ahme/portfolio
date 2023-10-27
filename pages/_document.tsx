@@ -40,7 +40,10 @@ export default function Document() {
           property="twitter:description"
           content="An experienced web developer passionate about creating accessible and inclusive web applications. With over a year of expertise in React, Vue, and their ecosystem, Eslam specializes in optimizing websites for a top-notch UI/UX and solid SEO. Dive into the details of a developer dedicated to user satisfaction and engagement."
         />
-        <meta property="twitter:image" content="/images/cover.png" />
+        <meta
+          property="twitter:image"
+          content="https://eslam-ahmed.vercel.app/images/cover.png"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
