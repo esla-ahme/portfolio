@@ -1,31 +1,17 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import Link from "next/link";
+import SectionContainer from "../Layout/Containers/SectionContainer";
 
 const Contact = () => {
   return (
-    <div
+    <SectionContainer
       id="contact"
-      className="
-      
-        p-4 lg:p-8 w-full
-     "
-      style={{
-        minHeight: "calc(100vh - 5rem)",
-      }}
+      title="Let's work together"
+      background="None"
     >
-      <SectionTitle title="Let's Connect" />
-      <div
-        className="max-w-[600px]
-            "
-      >
-        {" "}
-        <p
-          className="
-            text-textLight/75
-            mb-4
-            "
-        >
+      <div className="max-w-[600px]">
+        <p className="text-textLight/75 mb-4">
           I&apos;m always excited to connect with fellow professionals and
           explore new opportunities. Whether you have a project idea, a job
           opportunity, or just want to say hello, don&apos;t hesitate to reach
@@ -60,7 +46,7 @@ const Contact = () => {
           Let&apos;s start a conversation and explore how we can work together!
         </p>
       </div>
-    </div>
+    </SectionContainer>
   );
 };
 

@@ -1,29 +1,7 @@
-// Job title in main color then company name then date and location in same line, then details in bullet points
-//   initial={{
-//           x: "-100%",
-//           opacity: 0,
-//         }}
-//         whileInView={{
-//           x: 0,
-//           opacity: 1,
-//           transition: {
-//             duration: 0.5,
-//             delay: key * 0.5,
-//           },
-//         }}
-//         viewport={{ once: true }}
-
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-interface Props {
-  title: string;
-  company?: string;
-  startDate?: string;
-  location?: string;
-  endDate?: string;
-  description: string[];
-  key: number;
-}
+import { SectionData } from "./data";
+
 const Card = ({
   title,
   company,
@@ -31,8 +9,7 @@ const Card = ({
   endDate,
   location,
   description,
-  key,
-}: Props) => {
+}: SectionData) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -48,10 +25,8 @@ const Card = ({
           },
         }}
         viewport={{ once: true }}
-        key={key}
         className="w-full group mt-4 p-4 rounded-2xl border border-textLight/20  divide-y mdl:divide-y-0 mdl:divide-x divide-textLight/20 flex flex-col mdl:flex-row
-        hover:divide-textLight/50 hover:border-textLight/50 transition-all duration-200
-      "
+        hover:divide-textLight/50 hover:border-textLight/50 transition-all duration-200"
       >
         <div className="mdl:w-1/3 p-4 ">
           <h3 className="text-sm text-textLight">

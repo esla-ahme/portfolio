@@ -1,7 +1,7 @@
 export const sectionNames = ["Work", "Education", "Extracurriculars"];
 
-interface SectionData {
-  [key: string]: {
+export  interface SectionData {
+  
     title: string;
     company?: string;
     location?: string;
@@ -9,9 +9,10 @@ interface SectionData {
     endDate?: string;
     description: string[];
     urls?: string[];
-  }[];
 }
-export const sectionData: SectionData = {
+export const sectionData: {
+  [key:string]: SectionData[]
+} = {
   Work: [
     {
       title: "React Developer",
