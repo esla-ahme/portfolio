@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Tag from "../Tag";
 import { motion } from "framer-motion";
 import { Edit, ArrowUpRight } from "./Icon";
-
+import Icons from "../Icons/Icons";
 interface Props {
   title: string;
   description: string;
@@ -33,6 +32,7 @@ const Card = (props: Props) => {
   bg-textLight/5
   backdrop-blur-sm
   group
+   shadow-md
   "
     >
       <div className="group-hover:text-main flex justify-between">
@@ -40,12 +40,7 @@ const Card = (props: Props) => {
         <div className="flex space-x-2">
           {props.link && (
             <Link href={props.link} target="_blank">
-              <Image
-                src="/icons/github.svg"
-                width={20}
-                height={20}
-                alt="github"
-              />
+              <Icons width="20" name="Github" />
             </Link>
           )}
           {props.live && (

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CodeIcon from "../Icons/CodeIcon";
 import React from "react";
 
 const tech = [
@@ -52,13 +52,7 @@ function TechList() {
           key={index + tech}
           className="text-textLight/75 hover:text-textLight w-1/2 flex items-center gap-2"
         >
-          <Image
-            src="/icons/code.svg"
-            alt={tech}
-            width={16}
-            height={16}
-            className="inline-block "
-          />{" "}
+          <CodeIcon />
           {tech}
         </li>
       ))}

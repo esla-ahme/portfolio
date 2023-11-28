@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import navlinks, { sociallinks } from "./static";
 import Logo from "./Logo/Logo";
 import Icon from "./icon";
-import Image from "next/image";
+import Icons from "../Icons/Icons";
 const Navbar = () => {
   const [isSticky, setIsSticky] = React.useState(true);
   const [showSideBar, setShowSideBar] = React.useState(false);
@@ -131,7 +131,7 @@ const Navbar = () => {
                 className="p-4"
               >
                 <div className="social__links flex justify-center items-center">
-                  {sociallinks.map(({ link, icon }, index) => (
+                  {sociallinks.map(({ link, name, icon }, index) => (
                     <motion.a
                       whileHover={{
                         scale: 1.1,
@@ -139,10 +139,10 @@ const Navbar = () => {
                       }}
                       href={link}
                       target="_blank"
-                      className="px-6 py-2"
+                      className="px-6 py-2 hover:text-main text-textLight"
                       key={link + index}
                     >
-                      <Image src={icon} alt={link} width={30} height={30} />
+                      <Icons name={name} />
                     </motion.a>
                   ))}
                 </div>

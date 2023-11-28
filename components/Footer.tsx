@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Icons from "./Icons/Icons";
 
 const Footer = () => {
   return (
@@ -24,15 +25,10 @@ const Footer = () => {
       "
       >
         <Link href="https://github.com/esla-ahme" target="_blank">
-          <Image src="/icons/github.svg" alt="github" width={20} height={20} />
+          <Icons name="Github" width="20" />
         </Link>
         <Link href="https://www.linkedin.com/in/eslam0ahmed/" target="_blank">
-          <Image
-            src="/icons/linkedin.svg"
-            alt="linkedin"
-            width={20}
-            height={20}
-          />
+          <Icons name="Linkedin" width="20" />
         </Link>
         <Link href="https://twitter.com/esla_ahme" target="_blank">
           <Image
@@ -43,12 +39,7 @@ const Footer = () => {
           />
         </Link>
         <Link href="https://eslam-7ot.hashnode.dev/" target="_blank">
-          <Image
-            src="/icons/hashnode.svg"
-            alt="hashnode"
-            width={20}
-            height={20}
-          />
+          <Icons name="Hashnode" width="20" />
         </Link>
       </div>
       <p className=" mb-2 text-sm font-light text-textLight/75 text-center">

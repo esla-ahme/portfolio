@@ -25,8 +25,8 @@ const Card = ({
           },
         }}
         viewport={{ once: true }}
-        className="w-full group mt-4 p-4 rounded-2xl border border-textLight/20  divide-y mdl:divide-y-0 mdl:divide-x divide-textLight/20 flex flex-col mdl:flex-row
-        hover:divide-textLight/50 hover:border-textLight/50 transition-all duration-200"
+        className="w-full group mt-4 p-4 rounded-2xl border border-bgAccent  divide-y mdl:divide-y-0 mdl:divide-x divide-bgAccent flex flex-col mdl:flex-row
+         transition-all duration-200"
       >
         <div className="mdl:w-1/3 p-4 ">
           <h3 className="text-sm text-textLight">
@@ -40,7 +40,7 @@ const Card = ({
         </div>
         <div className="mdl:w-2/3 p-4">
           <h1 className="  text-2xl mb-4">{title}</h1>
-          <ul className="list-disc list-inside px-4 font-light text-sm group-hover:text-textLight text-textLight/75 ">
+          <ul className="list-disc list-inside px-4 font-light text-sm group-hover:text-textLight text-bgAccent ">
             {description.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
