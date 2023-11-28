@@ -1,10 +1,8 @@
-"use client";
 import React, {
   useEffect,
   useState,
   createContext,
   ReactNode,
-  use,
   useContext,
 } from "react";
 type ThemeType = {
@@ -34,17 +32,17 @@ const themes: Themes = {
   default: {
     "--main": "#7c3acd",
     "--bg": "#0A1625",
-    "--bg-accent": "#e3f1f1",
+    "--bg-accent": "#a9a9a9",
     "--text": "#c9d9e9",
   },
   dark: {
     "--bg": "#0A1625",
-    "--bg-accent": "#e3f1f1",
+    "--bg-accent": "#a9a9a9",
     "--text": "#c9d9e9",
   },
   light: {
     "--bg": "#e3f1f1",
-    "--bg-accent": "#0A1625",
+    "--bg-accent": "#2A3645",
     "--text": "#0A1625",
   },
   purple: {

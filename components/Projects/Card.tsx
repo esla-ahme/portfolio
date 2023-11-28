@@ -29,9 +29,9 @@ const Card = (props: Props) => {
       cursor-pointer
     bg-textLight/5 backdrop-blur-sm text-textLight p-4  my-4
     shadow-xl
-    border-t-textLight border-l-textLight
+    border-t-bgAccent border-l-bgAccent
     border-r-transparent border-b-transparent
-    border-4 mdl:border-8  hover:border-r-textLight hover:border-b-textLight hover:border-t-transparent hover:border-l-transparent 
+    border-4 mdl:border-8  hover:border-r-bgAccent hover:border-b-bgAccent hover:border-t-transparent hover:border-l-transparent 
     "
     >
       <h1
