@@ -37,7 +37,7 @@ const SideImage = () => {
           repeatType: "reverse",
           type: "tween",
         }}
-        className="m-auto overflow-hidden  bg-bgLight/75 shadow-2xl hover:bg-main duration-300 w-80 h-80 p-2"
+        className="m-auto overflow-hidden  bg-bgAccent/75 shadow-2xl hover:bg-main duration-300 w-80 h-80 p-2"
       >
         <div
           style={{

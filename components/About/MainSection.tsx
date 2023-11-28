@@ -22,7 +22,7 @@ function MainSection() {
 }
 function IntroductionSection() {
   return (
-    <p className="font-light text-bgLight/75">
+    <p className="font-light text-bgAccent/75">
       Hi, I&apos;m Eslam Ahmed, a{" "}
       <span className="font-semibold text-textLight mdl:text-mdl">
         web developer

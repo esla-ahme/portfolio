@@ -33,12 +33,12 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
         monteserrat: ["Montserrat", "sans-serif"],
       },
+
       colors: {
-        main: "#7c3acd",
-        bgDark: "#0A1625",
-        bgLight: "#e3f1f1",
-        textLight: "#c9d9e9",
-        textDark: "#485270",
+        main: "var(--main)",
+        bgDark: "var(--bg)",
+        bgAccent: "var(--bg-accent)",
+        textLight: "var(--text)",
       },
       boxShadow: {
         "3xl": "0 10px 30px -10px rgba(2, 12, 27, 0.5)",

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main: #7c3acd;
+  --bg: #0A1625;
+  --bg-accent: #e3f1f1;
+  --text: #c9d9e9;
+}
 html {
   scroll-behavior: smooth !important;
 }
@@ -11,19 +17,7 @@ html {
     margin: 0;
     box-sizing: border-box;
 }
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 /*make font smaller for mobiles*/
 @media (max-width: 380px) {
   html {
