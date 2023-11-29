@@ -8,16 +8,11 @@ import HeroSection from "@/components/Hero/HeroSection";
 import Navbar from "@/components/Navbar/navbar";
 import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import Projects from "@/components/Projects/Projects";
+import ThemeSwitcher from "@/components/ThemeSwitcher.tsx/ThemeSwitcher";
 import { useTheme } from "@/context/themeContext";
 import Head from "next/head";
 
 export default function Home() {
-  const { setTheme, theme } = useTheme();
-
-  const handleChange = (e: any) => {
-    setTheme(e.target.innerText);
-  };
-
   return (
     <>
       <Head>
@@ -32,14 +27,6 @@ export default function Home() {
         className="w-full h-screen  overflow-x-hidden overflow-y-scroll font-monteserrat bg-bgDark text-textLight "
       >
         <Navbar />
-        <ul onClick={handleChange}>
-          <li className="text-2xl">dark</li>
-          <li className="text-2xl">light</li>
-          <li className="text-2xl">purple</li>
-          <li className="text-2xl">teal</li>
-          <li className="text-2xl">orange</li>
-          <li className="text-2xl">blue</li>
-        </ul>
         <HeroSection />
         <About />
         <Experience />

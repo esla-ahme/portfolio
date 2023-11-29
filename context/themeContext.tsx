@@ -1,95 +1,58 @@
-import React, {
-  useEffect,
-  useState,
-  createContext,
-  ReactNode,
-  useContext,
-} from "react";
-type ThemeType = {
-  [key: string]: string;
-};
-type Themes = {
-  default: ThemeType;
-  dark: ThemeType;
-  light: ThemeType;
-  purple: ThemeType;
-  teal: ThemeType;
-  orange: ThemeType;
-  blue: ThemeType;
-};
-
-type ThemeName = keyof typeof themes;
-
-type ThemeContextType = {
-  theme: ThemeType;
-  setTheme: (themeName: ThemeName) => void;
-};
-
-type ThemeProviderProps = {
-  children: ReactNode;
-};
-const themes: Themes = {
-  default: {
-    "--main": "#7c3acd",
-    "--bg": "#0A1625",
-    "--bg-accent": "#a9a9a9",
-    "--text": "#c9d9e9",
-  },
-  dark: {
-    "--bg": "#0A1625",
-    "--bg-accent": "#a9a9a9",
-    "--text": "#c9d9e9",
-  },
-  light: {
-    "--bg": "#e3f1f1",
-    "--bg-accent": "#2A3645",
-    "--text": "#0A1625",
-  },
-  purple: {
-    "--main": "#7c3acd",
-  },
-  teal: {
-    "--main": "#00b894",
-  },
-  orange: {
-    "--main": "#e17055",
-  },
-  blue: {
-    "--main": "#3a86ff",
-  },
-};
+import {
+  ThemeContextType,
+  ThemeName,
+  ThemeProviderProps,
+} from "@/Types";
+import { themes } from "@/styles/colors";
+import React, { useEffect, useState, createContext, useContext } from "react";
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: themes.default,
-  setTheme: () => {},
+  theme: { mainColor: "purple", mode: "dark" },
+  setMode: () => {},
+  setColor: () => {},
 });
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState(themes.default);
-  const setTheme = (themeName: ThemeName) => {
-    const theme = themes[themeName];
-    if (theme) {
-      setCurrentTheme(theme);
-    }
+  const [currentTheme, setCurrentTheme] = useState({
+    mainColor: "purple" as ThemeName,
+    mode: "dark" as "light" | "dark",
+  });
+
+  const setTheme = ({
+    mainColor,
+    mode,
+  }: {
+    mainColor: ThemeName;
+    mode: "light" | "dark";
+  }) => {
+    setCurrentTheme({ mainColor, mode });
   };
+
+  const setMode = (mode: "light" | "dark") =>
+    setTheme({ mainColor: currentTheme.mainColor, mode });
+
+  const setColor = (mainColor: ThemeName) =>
+    setTheme({ mainColor, mode: currentTheme.mode });
+
   useEffect(() => {
-    console.log(currentTheme);
-    console.log(document.documentElement.style);
-    for (const key in currentTheme) {
-      document.documentElement.style.setProperty(
-        key,
-        currentTheme[key as keyof ThemeType]
-      );
-    }
-  }, [currentTheme]);
+    const root = document.documentElement;
+    Object.entries(themes[currentTheme.mainColor]).forEach(([key, value]) =>
+      root.style.setProperty(key, value)
+    );
+  }, [currentTheme.mainColor]);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    Object.entries(themes[currentTheme.mode]).forEach(([key, value]) =>
+      root.style.setProperty(key, value)
+    );
+  }, [currentTheme.mode]);
+
   return (
-    <ThemeContext.Provider value={{ theme: currentTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme: currentTheme, setColor, setMode }}>
       {children}
     </ThemeContext.Provider>
   );
 };
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  return context;
-};
+export const useTheme = () => useContext(ThemeContext);

@@ -4,6 +4,7 @@ import TypingWriter from "../TypingWriter";
 import { sociallinks } from "../Navbar/static";
 import Image from "next/image";
 import SectionContainer from "../Layout/Containers/SectionContainer";
+import Icons from "../Icons/Icons";
 
 const Roles = ["Software Engineer", "Frontend Engineer", "React Developer"];
 const HeroSection = () => {
@@ -38,18 +39,13 @@ const HeroSection = () => {
                   rel="noreferrer"
                   className="inline-block mr-8 opacity-75 hover:opacity-100 hover:text-main transition-all duration-300"
                 >
-                  <Image
-                    src={link.icon}
-                    alt={link.link}
-                    width={30}
-                    height={30}
-                  />
+                  <Icons name={link.name} />
                 </motion.a>
               );
             })}
           </div>
           <div className="relative  flex gap-2.5 items-center  w-full">
-            <button className="border-main z-20 border-2 bg-main hover:brightness-110  text-textLight px-8 py-2 rounded-md text-base font-semibold">
+            <button className="border-main z-20 border-2 bg-main hover:brightness-110 text-white px-8 py-2 rounded-md text-base font-semibold">
               <a href="mailto: eslamahmed9861@gmail.com">Contact Me</a>
             </button>
 
@@ -75,7 +71,7 @@ const HeroSection = () => {
                   repeatType: "reverse",
                 },
               }}
-              className=" w-2.5 h-2.5  bg-textLight rounded-full"
+              className=" w-2.5 h-2.5  bg-bgAccent rounded-full"
             ></motion.div>
             <motion.a
               href="/resume.pdf"

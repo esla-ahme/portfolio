@@ -9,6 +9,6 @@
 }
 
 .Bottom {
-    background: linear-gradient(0deg, #0A1625 0%, var(--bg) 85%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--bg) 85%, var(--bg) 100%);
     /* Your CSS styles for the Bottom background variation here */
 }

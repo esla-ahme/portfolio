@@ -13,11 +13,8 @@ const Footer = () => {
                   w-full
         flex flex-col justify-center items-center gap-2
         sm:flex-row sm:justify-between sm:items-center
+        bg-black/10
         "
-      style={{
-        background:
-          "linear-gradient(0deg, rgba(0,0,0,0) 0%, #0A1625 15%, rgba(0,0,0,0) 100%)",
-      }}
     >
       <div
         className="social__icons flex justify-center items-center mb-2 gap-4
@@ -30,13 +27,8 @@ const Footer = () => {
         <Link href="https://www.linkedin.com/in/eslam0ahmed/" target="_blank">
           <Icons name="Linkedin" width="20" />
         </Link>
-        <Link href="https://twitter.com/esla_ahme" target="_blank">
-          <Image
-            src="/icons/twitter.svg"
-            alt="twitter"
-            width={20}
-            height={20}
-          />
+        <Link href="https://twitter.com/eslamcodes" target="_blank">
+          <Icons name="Twitter" width="20" />
         </Link>
         <Link href="https://eslam-7ot.hashnode.dev/" target="_blank">
           <Icons name="Hashnode" width="20" />
