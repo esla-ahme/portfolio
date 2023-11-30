@@ -62,7 +62,6 @@ export default function Document() {
           property="twitter:image"
           content="https://eslam-ahmed.vercel.app/images/cover.png"
         />
-        <link rel="preload" as="image" href="/images/eslam.webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

@@ -18,12 +18,6 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
     setColor(color);
   };
 
-  useEffect(() => {
-    // This is where you can handle any side effects based on the theme changes
-    console.log("Theme changed:", theme);
-    console.log(themes["blue"]["--main"]);
-  }, [theme]);
-
   const handleModeToggle = () => {
     setMode(theme.mode === "light" ? "dark" : "light");
   };

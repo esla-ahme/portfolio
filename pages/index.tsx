@@ -8,8 +8,7 @@ import HeroSection from "@/components/Hero/HeroSection";
 import Navbar from "@/components/Navbar/navbar";
 import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import Projects from "@/components/Projects/Projects";
-import ThemeSwitcher from "@/components/ThemeSwitcher.tsx/ThemeSwitcher";
-import { useTheme } from "@/context/themeContext";
+import { ThemeProvider, useTheme } from "@/context/themeContext";
 import Head from "next/head";
 
 export default function Home() {
@@ -26,8 +25,12 @@ export default function Home() {
         id="main"
         className="w-full h-screen  overflow-x-hidden overflow-y-scroll font-monteserrat bg-bgDark text-textLight "
       >
-        <Navbar />
+        <ThemeProvider>
+          <Navbar />
+        </ThemeProvider>
+
         <HeroSection />
+
         <About />
         <Experience />
         <Projects />

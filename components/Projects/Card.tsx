@@ -7,18 +7,15 @@ interface Props {
   role: string[];
   techStack: string[];
   link: string;
-  key: number;
 }
 const Card = (props: Props) => {
-  const [sign, setSign] = React.useState(props.key % 2 === 0 ? 1 : -1);
   return (
     <motion.div
       initial={{ opacity: 0, y: "100" }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      whileHover={{ y: 4, x: -4, skewX: sign * 0.5, skewY: sign * 0.5 }}
+      whileHover={{ y: 4, x: -4, skewX: 0.5, skewY: 0.5 }}
       viewport={{ once: true }}
-      key={props.key}
       onClick={() => window.open(props.link, "_blank")}
       className="
       w-full

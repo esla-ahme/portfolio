@@ -15,7 +15,6 @@ const Navbar = () => {
     setShowSideBar(!showSideBar);
   };
   const handleScroll = () => {
-    console.log(window.scrollY);
     if (window.scrollY > 0) {
       setIsSticky(true);
     } else {
@@ -31,7 +30,6 @@ const Navbar = () => {
   }, []);
 
   const handleClick = (e: React.MouseEvent, id: string) => {
-    console.log(id);
     e.preventDefault();
     e.stopPropagation();
     setShowSideBar(false);
@@ -39,7 +37,6 @@ const Navbar = () => {
     const main = document.getElementById("main");
     const topOffset = element?.offsetTop;
 
-    console.log(topOffset);
     main?.scroll({
       behavior: "smooth",
       left: 0,
