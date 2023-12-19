@@ -7,10 +7,10 @@ import Logo from "./Logo/Logo";
 import Icon from "./icon";
 import Icons from "../Icons/Icons";
 import ThemeSwitcher from "../ThemeSwitcher.tsx/ThemeSwitcher";
+import ThemeContainer from "./ThemeContainer";
 const Navbar = () => {
   const [isSticky, setIsSticky] = React.useState(true);
   const [showSideBar, setShowSideBar] = React.useState(false);
-  const [showThemeSwitcher, setShowThemeSwitcher] = React.useState(false);
   const toggleSideBar = () => {
     setShowSideBar(!showSideBar);
   };
@@ -52,6 +52,8 @@ const Navbar = () => {
       style={{ backdropFilter: "blur(10px)" }}
     >
       <Logo />
+
+      {/* large screen links */}
       <div className="hidden mdl:inline-flex items-center">
         <ul className="navbar__links flex justify-end mr-4">
           {navlinks.map((link, index) => {
@@ -70,38 +72,10 @@ const Navbar = () => {
               </motion.li>
             );
           })}
-          <motion.li
-            initial={{ opacity: 0, y: -10, x: -10 }}
-            animate={{ opacity: 100, y: 0, x: 0 }}
-            transition={{ delay: 0.5 + 0.6 }}
-            className="mx-4"
-            onClick={() => setShowThemeSwitcher(!showThemeSwitcher)}
-          >
-            <Icons name="Magic" className="w-6 h-6" />
-          </motion.li>
         </ul>
-        <AnimatePresence>
-          {showThemeSwitcher && (
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 100,
-              }}
-              animate={{
-                opacity: showThemeSwitcher ? 1 : 0,
-                x: showThemeSwitcher ? 0 : 100,
-              }}
-              exit={{ opacity: 0, x: 100 }}
-              transition={{ duration: 0.2 }}
-              className="absolute top-24 right-0 w-40 h-24 bg-textLight grid place-items-center rounded-s-lg
-                  shadow-lg
-                "
-            >
-              <ThemeSwitcher />
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
+      <ThemeContainer />
+      {/* small screen links in sidebar */}
       <div className="mdl:hidden">
         {showSideBar && (
           <div
@@ -188,9 +162,6 @@ const Navbar = () => {
                 >
                   EslamAhmed9861@gmail.com
                 </a>
-              </motion.li>
-              <motion.li className="absolute bottom-24 left-0 w-full">
-                <ThemeSwitcher />
               </motion.li>
             </motion.ul>
           )}
