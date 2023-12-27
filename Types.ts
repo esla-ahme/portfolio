@@ -24,3 +24,17 @@ export type ThemeContextType = {
 export type ThemeProviderProps = {
   children: ReactNode;
 };
+
+export interface IArticle {
+  title: string;
+  brief: string;
+  date: string;
+  coverImage: string;
+  url: string;
+  views: number;
+  tags: string[];
+}
+
+export interface IArticles {
+  articles: IArticle[];
+}

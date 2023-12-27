@@ -27,6 +27,16 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.hashnode.com",
+        pathname: "/res/hashnode/image/upload/**",
+        port: "",
+      },
+    ],
+  },
   reactStrictMode: true,
 };
 
