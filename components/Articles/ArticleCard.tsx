@@ -30,7 +30,7 @@ const ArticleCard = (article: IArticle) => {
         alt={article.title}
       />
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-main font-semibold text-lg">{article.title}</h3>
+        <h3 className="text-main mb-2 font-semibold ">{article.title}</h3>
         <div
           className="flex justify-between items-center
         text-xs text-textLight-75
@@ -41,7 +41,7 @@ const ArticleCard = (article: IArticle) => {
             <EyeIcon size={14} /> {article.views}
           </span>
         </div>
-        <p className=" my-2   text-textLight/75 ">{article.brief}</p>
+        <p className=" my-2 text-textLight/75 text-sm ">{article.brief}</p>
 
         <div className="flex flex-wrap gap-2 mb-auto">
           {article.tags.map((tag, index) => (

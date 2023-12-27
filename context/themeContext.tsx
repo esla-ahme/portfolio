@@ -42,7 +42,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   }, [currentTheme.mainColor]);
 
   useEffect(() => {
-    console.log("mode changed: " + currentTheme.mode);
     const root = document.documentElement;
     Object.entries(themes[currentTheme.mode]).forEach(([key, value]) =>
       root.style.setProperty(key, value)

@@ -34,7 +34,6 @@ async function fetchData() {
       },
     });
     const jsonResponse = await response.json();
-    console.log(jsonResponse);
     return jsonResponse.data;
   } catch (error) {
     console.error(error);
@@ -44,17 +43,19 @@ export async function prepareData() {
   try {
     const raw_data: any = await fetchData();
     if (!raw_data) return [];
-    const neededData: IArticle = raw_data.user.posts.nodes.map((post: any) => {
-      return {
-        title: post.title,
-        brief: post.brief,
-        views: post.views,
-        coverImage: post.coverImage.url,
-        date: post.updatedAt || post.publishedAt,
-        url: post.url,
-        tags: post.tags.map((tag: any) => tag.name),
-      };
-    });
+    const neededData: IArticle[] = raw_data.user.posts.nodes.map(
+      (post: any) => {
+        return {
+          title: post.title,
+          brief: post.brief.substring(0, 280 - post.title.length * 2),
+          views: post.views,
+          coverImage: post.coverImage.url,
+          date: post.updatedAt || post.publishedAt,
+          url: post.url,
+          tags: post.tags.map((tag: any) => tag.name),
+        };
+      }
+    );
     const sortedData: IArticle[] = neededData?.sort((a: any, b: any) => {
       return b.views - a.views;
     });
