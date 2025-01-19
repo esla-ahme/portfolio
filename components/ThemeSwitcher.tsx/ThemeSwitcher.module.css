@@ -1,0 +1,49 @@
+/* styles/ThemeSwitcher.module.css */
+.themeSwitcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.colorButtons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.colorButton {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active {
+    border: 2px solid #fff;
+}
+
+.modeToggle {
+    display: flex;
+    align-items: center;
+}
+
+.toggleButton {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #00000050;
+    width: 64px;
+    border-radius: 32px;
+    /*inside shadow*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.toggleIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
