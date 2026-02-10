@@ -9,6 +9,7 @@ interface Props {
   link: string;
 }
 const Card = (props: Props) => {
+  const openLink = () => window.open(props.link, "_blank");
   return (
     <motion.div
       initial={{ opacity: 0, y: "100" }}
@@ -16,11 +17,16 @@ const Card = (props: Props) => {
       transition={{ duration: 1 }}
       whileHover={{ y: 4, x: -4, skewX: 0.5, skewY: 0.5 }}
       viewport={{ once: true }}
-      onClick={() => window.open(props.link, "_blank")}
+      role="link"
+      tabIndex={0}
+      onClick={openLink}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") openLink();
+      }}
       className="
       w-full
         max-w-containerSmall
-        mdl:px-16 mdl:py-8 
+        mdl:px-16 mdl:py-8
         mx-2
       m-auto
       cursor-pointer
@@ -28,16 +34,17 @@ const Card = (props: Props) => {
     shadow-xl
     border-t-bgAccent border-l-bgAccent
     border-r-transparent border-b-transparent
-    border-4 mdl:border-8  hover:border-r-bgAccent hover:border-b-bgAccent hover:border-t-transparent hover:border-l-transparent 
+    border-4 mdl:border-8  hover:border-r-bgAccent hover:border-b-bgAccent hover:border-t-transparent hover:border-l-transparent
+    focus:outline-2 focus:outline-main focus:outline-offset-2
     "
     >
-      <h1
+      <h2
         className="
         text-xl font-bold text-main
       "
       >
         {props.title}
-      </h1>
+      </h2>
       <p
         className="
         text-sm  my-2 italic

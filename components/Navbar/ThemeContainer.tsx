@@ -8,12 +8,14 @@ const ThemeContainer = () => {
 
   return (
     <div className=" flex-1 mdl:flex-initial ">
-      <i
-        className=" cursor-pointer mx-4 hover:text-main list-none flex justify-end items-center "
+      <button
+        className="cursor-pointer mx-4 hover:text-main list-none flex justify-end items-center bg-transparent border-none"
         onClick={() => setShowThemeSwitcher(!showThemeSwitcher)}
+        aria-label="Toggle theme switcher"
+        aria-expanded={showThemeSwitcher}
       >
         <Icons name="Magic" className="w-6 h-6" />
-      </i>
+      </button>
       <AnimatePresence>
         {showThemeSwitcher && (
           <motion.div

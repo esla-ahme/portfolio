@@ -1,9 +1,7 @@
 import React from "react";
-import SectionTitle from "../SectionTitle";
-import { articles } from "./data";
+
 import ArticleCard from "./ArticleCard";
 import Link from "next/link";
-import Image from "next/image";
 import SectionContainer from "../Layout/Containers/SectionContainer";
 import { ReadmoreButton } from "./ReadmoreButton";
 import { prepareData } from "./prepareData";
@@ -28,7 +26,7 @@ const Articles = () => {
         ))}
       </div>
       <Link href="https://eslam-7ot.hashnode.dev/">
-        <ReadmoreButton></ReadmoreButton>{" "}
+        <ReadmoreButton></ReadmoreButton>
       </Link>
     </SectionContainer>
   );

@@ -1,12 +1,9 @@
-import Link from "next/link";
-
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import navlinks, { sociallinks } from "./static";
 import Logo from "./Logo/Logo";
 import Icon from "./icon";
 import Icons from "../Icons/Icons";
-import ThemeSwitcher from "../ThemeSwitcher.tsx/ThemeSwitcher";
 import ThemeContainer from "./ThemeContainer";
 const Navbar = () => {
   const [isSticky, setIsSticky] = React.useState(true);
@@ -29,7 +26,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleClick = (e: React.MouseEvent, id: string) => {
+  const handleClick = (e: React.MouseEvent | React.KeyboardEvent, id: string) => {
     e.preventDefault();
     e.stopPropagation();
     setShowSideBar(false);
@@ -42,6 +39,12 @@ const Navbar = () => {
       left: 0,
       top: Number(topOffset) - 40,
     });
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent, id: string) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleClick(e, id);
+    }
   };
 
   return (
@@ -64,11 +67,15 @@ const Navbar = () => {
                 transition={{ delay: 0.5 + index * 0.1 }}
                 className="mx-4"
                 key={link.link + index}
-                onClick={(e) => handleClick(e, link.name)}
               >
-                <span className=" hover:text-main  duration-300 cursor-pointer">
-                  {link.name}{" "}
-                </span>
+                <button
+                  type="button"
+                  onClick={(e) => handleClick(e, link.name)}
+                  onKeyDown={(e) => handleKeyDown(e, link.name)}
+                  className="hover:text-main duration-300 cursor-pointer bg-transparent border-none p-0 font-inherit text-inherit"
+                >
+                  {link.name}
+                </button>
               </motion.li>
             );
           })}
@@ -80,16 +87,16 @@ const Navbar = () => {
         {showSideBar && (
           <div
             className="
-        menu_backdrop fixed top-20 left-0 bg-bgDark/50 backdrop-blur-md cursor-pointer 
+        menu_backdrop fixed top-20 left-0 bg-bgDark/50 backdrop-blur-md cursor-pointer
         w-screen h-screen
         "
-            onClick={
-              showSideBar
-                ? () => {
-                    setShowSideBar(false);
-                  }
-                : () => {}
-            }
+            role="button"
+            aria-label="Close menu"
+            tabIndex={0}
+            onClick={() => setShowSideBar(false)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") setShowSideBar(false);
+            }}
           ></div>
         )}
         <Icon onClick={toggleSideBar} opened={showSideBar} />
@@ -109,7 +116,6 @@ const Navbar = () => {
               {navlinks.map((link, index) => {
                 return (
                   <motion.li
-                    onClick={(e) => handleClick(e, link.name)}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 100, x: 0 }}
                     transition={{ delay: index * 0.2 }}
@@ -120,9 +126,14 @@ const Navbar = () => {
                     className="p-4 md:py-3"
                     key={link.link + index}
                   >
-                    <span className=" hover:text-main  duration-300 cursor-pointer text-xl my-4">
+                    <button
+                      type="button"
+                      onClick={(e) => handleClick(e, link.name)}
+                      onKeyDown={(e) => handleKeyDown(e, link.name)}
+                      className="hover:text-main duration-300 cursor-pointer bg-transparent border-none p-0 font-inherit text-inherit text-xl my-4"
+                    >
                       {link.name}
-                    </span>
+                    </button>
                   </motion.li>
                 );
               })}
@@ -141,6 +152,8 @@ const Navbar = () => {
                       }}
                       href={link}
                       target="_blank"
+                      rel="noreferrer"
+                      aria-label={name}
                       className="px-6 py-2 hover:text-main text-textLight"
                       key={link + index}
                     >

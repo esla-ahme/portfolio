@@ -30,7 +30,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-textLight font-semibold">
+            <span className="text-white font-semibold">
               Check My Resume
             </span>
           </Link>

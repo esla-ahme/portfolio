@@ -1,4 +1,3 @@
-"use client";
 import About from "@/components/About/About";
 import Articles from "@/components/Articles/Articles";
 import Contact from "@/components/Contact/Contact";
@@ -15,10 +14,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Eslam Ahmed - Software Engineer</title>
+        <title>Eslam Ahmed - Software Engineer with Frontend Speciality</title>
         <meta
           name="description"
-          content="Frontend Engineer specializing in React, Vue, GraphQL, and more."
+          content="Results-driven Software Engineer with 3+ years of experience in React, Vue, TypeScript, and modern JavaScript frameworks."
         />
       </Head>
       <main
@@ -27,7 +26,6 @@ export default function Home() {
       >
         <ThemeProvider>
           <Navbar />
-        </ThemeProvider>
 
         <HeroSection />
 
@@ -37,7 +35,8 @@ export default function Home() {
         <OtherProjects />
         <Articles />
         <Contact />
-        <Footer />
+        <Footer />        </ThemeProvider>
+
       </main>
     </>
   );

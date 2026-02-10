@@ -48,10 +48,14 @@ const ArticleCard = (article: IArticle) => {
             <Tag key={index} name={tag} size="small" />
           ))}
         </div>
-        <Link href={article.url} target="_blank">
-          <button className="bg-textLight/20 hover:bg-main hover:scale-105 duration-500 ease-in-out py-1 px-4 w-1/2 m-auto mt-4 rounded-md ">
-            Read More
-          </button>
+        <Link
+          href={article.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Read more about ${article.title}`}
+          className="bg-textLight/20 hover:bg-main hover:scale-105 duration-500 ease-in-out py-1 px-4 w-1/2 m-auto mt-4 rounded-md text-center inline-block"
+        >
+          Read More
         </Link>
       </div>
     </motion.div>

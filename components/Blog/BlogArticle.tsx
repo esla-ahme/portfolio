@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {BlogArticle} from "./data";
 interface FullWidthArticleProps {
-  article: Article;
+  article: BlogArticle;
 }
 
 const FullWidthArticle: React.FC<FullWidthArticleProps> = ({ article }) => {

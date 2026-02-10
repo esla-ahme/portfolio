@@ -1,14 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Icons from "./Icons/Icons";
 
 const Footer = () => {
   return (
-    <div
+    <footer
       className="
       px-4
-      sm:px-8 
+      sm:px-8
       py-8
                   w-full
         flex flex-col justify-center items-center gap-2
@@ -21,16 +20,16 @@ const Footer = () => {
       opacity-75
       "
       >
-        <Link href="https://github.com/esla-ahme" target="_blank">
+        <Link href="https://github.com/esla-ahme" target="_blank" rel="noreferrer" aria-label="GitHub profile">
           <Icons name="Github" width="20" />
         </Link>
-        <Link href="https://www.linkedin.com/in/eslam0ahmed/" target="_blank">
+        <Link href="https://www.linkedin.com/in/eslam0ahmed/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
           <Icons name="Linkedin" width="20" />
         </Link>
-        <Link href="https://twitter.com/eslamcodes" target="_blank">
+        <Link href="https://twitter.com/eslamcodes" target="_blank" rel="noreferrer" aria-label="Twitter profile">
           <Icons name="Twitter" width="20" />
         </Link>
-        <Link href="https://eslam-7ot.hashnode.dev/" target="_blank">
+        <Link href="https://eslam-7ot.hashnode.dev/" target="_blank" rel="noreferrer" aria-label="Hashnode blog">
           <Icons name="Hashnode" width="20" />
         </Link>
       </div>
@@ -39,11 +38,12 @@ const Footer = () => {
         <Link
           className="font-normal hover:text-main"
           href="https://github.com/esla-ahme"
+          rel="noreferrer"
         >
           Eslam Ahmed
         </Link>
       </p>
-    </div>
+    </footer>
   );
 };
 

@@ -1,12 +1,13 @@
-import React, { use, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 interface TypingWriterProps {
   sentences: string[];
   loop: boolean;
   classes?: string;
+  as?: keyof JSX.IntrinsicElements;
 }
 
-const TypingWriter = ({ sentences, loop, classes }: TypingWriterProps) => {
+const TypingWriter = ({ sentences, loop, classes, as: Tag = "h3" }: TypingWriterProps) => {
   const [index, setIndex] = React.useState(0);
   const [currentLetter, setCurrentLetter] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
@@ -38,7 +39,7 @@ const TypingWriter = ({ sentences, loop, classes }: TypingWriterProps) => {
     };
   }, [currentLetter, index, isDeleting, sentences, speed]);
   return (
-    <h3 className={`my-4 font-semibold ${classes}`}>
+    <Tag className={`my-4 font-semibold ${classes}`}>
       {currentLetter || ""}
       <motion.span
         animate={{ opacity: 1 }}
@@ -48,7 +49,7 @@ const TypingWriter = ({ sentences, loop, classes }: TypingWriterProps) => {
       >
         |
       </motion.span>
-    </h3>
+    </Tag>
   );
 };
 

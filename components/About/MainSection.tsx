@@ -4,14 +4,18 @@ import React from "react";
 const tech = [
   "React",
   "Vue",
+  "Next.js",
+  "TypeScript",
   "Redux",
+  "React Query",
   "Tailwind",
   "Node.js",
   "Express.js",
-  "TypeScript",
-  "Firebase",
   "GraphQL",
+  "Firebase",
   "MongoDB",
+  "Python",
+  "SQL",
   "C++",
   "Java",
 ];
@@ -33,15 +37,24 @@ function IntroductionSection() {
         <span className="font-semibold text-textLight mdl:text-mdl">
           Frontend Engineer
         </span>{" "}
-        with over 2 years of experience. Currently, I work as a{" "}
-        <span className="font-semibold text-textLight">Solution Developer</span>{" "}
+        with 3+ years of experience. Currently, I work as a{" "}
+        <span className="font-semibold text-textLight">Solutions Developer</span>{" "}
         at{" "}
         <span className="font-semibold text-textLight">Zoho Corp</span>, where I
-        design and implement client-focused solutions using{" "}
+        build high-performance{" "}
         <span className="font-semibold text-textLight">
-          JavaScript, TypeScript, and Zoho Deluge
+          custom React widgets
         </span>
-        .
+        , design scalable frontend solutions with advanced permission logic and
+        real-time data visualization, and develop robust{" "}
+        <span className="font-semibold text-textLight">
+          REST API and webhook integrations
+        </span>
+        . I also create{" "}
+        <span className="font-semibold text-textLight">
+          Python and Node.js scripts
+        </span>{" "}
+        for automating migration of millions of records.
       </p>
       <p className="font-light text-bgAccent/75">
         I specialize in building scalable web platforms, optimizing UI/UX, and

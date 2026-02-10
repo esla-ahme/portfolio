@@ -31,7 +31,7 @@ const config: Config = {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-        monteserrat: ["Montserrat", "sans-serif"],
+        monteserrat: ["var(--font-montserrat)", "Montserrat", "sans-serif"],
       },
 
       colors: {

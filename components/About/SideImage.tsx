@@ -47,10 +47,11 @@ const SideImage = () => {
         >
           <Image
             src="/images/eslam.webp"
-            alt="about"
+            alt="Eslam Ahmed - Software Engineer"
             className=" m-auto  w-full h-full object-contain  "
             width={300}
             height={300}
+            priority
           />
         </div>
       </motion.div>

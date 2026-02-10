@@ -1,5 +1,7 @@
-ezport interface BlogArticle {
+export interface BlogArticle {
+    id: string;
     title: string;
+    type: string;
     teaser: string;
     date: string;
     image: string;

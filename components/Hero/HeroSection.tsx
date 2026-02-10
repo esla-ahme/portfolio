@@ -12,7 +12,7 @@ const HeroSection = () => {
     <SectionContainer id="home" background="None">
       <div className="flex ">
         <div className="lg:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall mt-8">
-          <h3 className="text-xl my-4">Hello there, I&apos;m</h3>
+          <p className="text-xl my-4">Hello there, I&apos;m</p>
           <h1 className="text-5xl mdl:text-6xl font-bold font-inter text-main">
             Eslam Ahmed
           </h1>
@@ -20,13 +20,15 @@ const HeroSection = () => {
             sentences={Roles}
             loop={true}
             classes="text-2xl mdl:text-4xl"
+            as="h2"
           />
           <p className="mdl:text-lg mt-4 mb-6 text-textLight/75 whitespace-break-spaces">
-            I&apos;m an experienced web developer with a solid foundation in
-            both front-end and back-end development. With over a years of
-            expertise in React, Vue and their ecosystem, I focus on creating
-            accessible and inclusive web applications that prioritize user
-            satisfaction and engagement.
+            Results-driven Frontend Engineer with 3+ years of experience
+            building responsive, scalable web applications using React, Vue,
+            and modern JavaScript frameworks. Proven track record of delivering
+            high-performance user interfaces, complex state management
+            solutions, and seamless API integrations. Currently working as a
+            Solutions Developer at Zoho Corp.
           </p>
           <div className="flex  items-center my-4">
             {sociallinks.map((link, index) => {
@@ -37,6 +39,7 @@ const HeroSection = () => {
                   href={link.link}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={link.name}
                   className="inline-block mr-8 opacity-75 hover:opacity-100 hover:text-main transition-all duration-300"
                 >
                   <Icons name={link.name} />
@@ -45,9 +48,12 @@ const HeroSection = () => {
             })}
           </div>
           <div className="relative  flex gap-2.5 items-center  w-full">
-            <button className="border-main z-20 border-2 bg-main hover:brightness-110 text-white px-8 py-2 rounded-md text-base font-semibold">
-              <a href="mailto: eslamahmed9861@gmail.com">Contact Me</a>
-            </button>
+            <a
+              href="mailto:eslamahmed9861@gmail.com"
+              className="border-main z-20 border-2 bg-main hover:brightness-110 text-white px-8 py-2 rounded-md text-base font-semibold inline-block"
+            >
+              Contact Me
+            </a>
 
             {/* a ball that come from behind the button */}
 
@@ -92,6 +98,7 @@ const HeroSection = () => {
                 sentences={["Open to hiring", "Check my resume"]}
                 loop={false}
                 classes="font-light"
+                as="span"
               />
             </motion.a>
           </div>
@@ -110,10 +117,11 @@ const HeroSection = () => {
         >
           <Image
             src="/images/hero.svg"
-            alt="hero"
+            alt="Software engineer working at a desk illustration"
             className="flex-grow "
             width={400}
             height={400}
+            priority
           />
         </motion.div>
       </div>

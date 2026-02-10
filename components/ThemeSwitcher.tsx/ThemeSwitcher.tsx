@@ -33,7 +33,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
   return (
     <div className={styles.themeSwitcher}>
       <div className={styles.modeToggle}>
-        <button className={styles.toggleButton} onClick={handleModeToggle}>
+        <button className={styles.toggleButton} onClick={handleModeToggle} aria-label={theme.mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}>
           <motion.div
             initial={false}
             animate={theme.mode}
@@ -61,6 +61,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
             style={{
               backgroundColor: themes[color as ThemeName]["--main"],
             }}
+            aria-label={`Set ${color} accent color`}
             onClick={(e) => handleChange(e, color as ThemeName)}
           />
         ))}

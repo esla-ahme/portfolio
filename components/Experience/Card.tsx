@@ -29,17 +29,17 @@ const Card = ({
          transition-all duration-200"
       >
         <div className="mdl:w-1/3 p-4 ">
-          <h3 className="text-sm text-textLight">
+          <p className="text-sm text-textLight">
             {startDate} - {endDate}
-          </h3>
+          </p>
           <div className="flex flex-wrap items-center justify-between">
             {" "}
-            <h2 className=" text-xl font-semibold text-main ">{company}</h2>
-            <h3 className="text-sm text-textLight">{location}</h3>
+            <p className=" text-xl font-semibold text-main ">{company}</p>
+            <p className="text-sm text-textLight">{location}</p>
           </div>
         </div>
         <div className="mdl:w-2/3 p-4">
-          <h1 className="  text-2xl mb-4">{title}</h1>
+          <h3 className="  text-2xl mb-4">{title}</h3>
           <ul className="list-disc list-inside px-4 font-light text-sm group-hover:text-textLight text-bgAccent ">
             {description.map((item, index) => (
               <li key={index}>{item}</li>

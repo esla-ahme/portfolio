@@ -39,18 +39,18 @@ const Card = (props: Props) => {
         <Edit />
         <div className="flex space-x-2">
           {props.link && (
-            <Link href={props.link} target="_blank">
+            <Link href={props.link} target="_blank" rel="noreferrer" aria-label={`View ${props.title} source on GitHub`}>
               <Icons width="20" name="Github" />
             </Link>
           )}
           {props.live && (
-            <Link href={props.live} target="_blank" className="text-xl">
+            <Link href={props.live} target="_blank" rel="noreferrer" aria-label={`View ${props.title} live site`} className="text-xl">
               <ArrowUpRight />
             </Link>
           )}
         </div>
       </div>
-      <h1
+      <h3
         className="
       text-xl
       font-semibold
@@ -59,7 +59,7 @@ const Card = (props: Props) => {
       "
       >
         {props.title}
-      </h1>
+      </h3>
       <p className="text-sm px-4 my-2 italic">{props.description}</p>
       <div className="flex flex-wrap gap-2">
         {props.techStack.map((tech, index) => (
