@@ -15,10 +15,13 @@ export type Themes = {
 
 export type ThemeName = keyof Themes;
 
+export type FontSize = "small" | "medium" | "large";
+
 export type ThemeContextType = {
-  theme: { mainColor: ThemeName; mode: "light" | "dark" };
+  theme: { mainColor: ThemeName; mode: "light" | "dark"; fontSize: FontSize };
   setMode: (mode: "light" | "dark") => void;
   setColor: (color: ThemeName) => void;
+  setFontSize: (size: FontSize) => void;
 };
 
 export type ThemeProviderProps = {

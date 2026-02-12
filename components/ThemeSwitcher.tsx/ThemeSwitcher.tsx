@@ -1,15 +1,21 @@
 // components/ThemeSwitcher.tsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./ThemeSwitcher.module.css";
 import { useTheme } from "@/context/themeContext";
-import { ThemeName } from "@/Types";
+import { FontSize, ThemeName } from "@/Types";
 import { themes } from "@/styles/colors";
 import { motion } from "framer-motion";
 import Icons from "@/components/Icons/Icons";
 type ThemeSwitcherProps = {};
 
 const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
-  const { setMode, setColor, theme } = useTheme();
+  const { setMode, setColor, setFontSize, theme } = useTheme();
+
+  const fontSizes: { key: FontSize; label: string; size: number }[] = [
+    { key: "small", label: "A", size: 13 },
+    { key: "medium", label: "A", size: 17 },
+    { key: "large", label: "A", size: 22 },
+  ];
 
   const handleChange = (
     e: React.MouseEvent<HTMLButtonElement>,
@@ -64,6 +70,21 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
             aria-label={`Set ${color} accent color`}
             onClick={(e) => handleChange(e, color as ThemeName)}
           />
+        ))}
+      </div>
+      <div className={styles.fontSizeButtons}>
+        {fontSizes.map(({ key, label, size }) => (
+          <button
+            key={key}
+            className={`${styles.fontSizeButton} ${
+              key === theme.fontSize ? styles.active : ""
+            }`}
+            style={{ fontSize: `${size}px` }}
+            aria-label={`Set ${key} font size`}
+            onClick={() => setFontSize(key)}
+          >
+           <span className="text-main"> {label}</span>
+          </button>
         ))}
       </div>
     </div>

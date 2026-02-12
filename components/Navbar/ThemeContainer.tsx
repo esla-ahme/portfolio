@@ -29,7 +29,7 @@ const ThemeContainer = () => {
             }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-24 right-0 w-40 h-24 bg-textLight grid place-items-center rounded-s-lg
+            className="absolute top-24 right-0 w-40 h-36 bg-textLight grid place-items-center rounded-s-lg
                   shadow-lg
                 "
           >

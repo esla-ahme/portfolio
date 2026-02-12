@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" fill="none">
+  <!-- Opening angle bracket < -->
+  <path d="M8 50 L28 30" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 50 L28 70" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- E letter -->
+  <path d="M44 30 L44 70" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+  <path d="M44 30 L68 30" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+  <path d="M44 50 L64 50" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+  <path d="M44 70 L68 70" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- A letter -->
+  <path d="M82 70 L97 30" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+  <path d="M97 30 L112 70" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+  <path d="M87 54 L107 54" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Forward slash / -->
+  <path d="M130 70 L142 30" stroke="currentColor" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Closing angle bracket > -->
+  <path d="M156 30 L176 50" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M176 50 L156 70" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -7,8 +7,10 @@
   --bg: #0A1625;
   --bg-accent: #e3f1f1;
   --text: #c9d9e9;
+  --font-size: 16px;
 }
 html {
+  font-size: var(--font-size);
   scroll-behavior: smooth !important;
 }
 * {

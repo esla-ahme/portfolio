@@ -47,3 +47,31 @@
     height: 32px;
     border-radius: 50%;
 }
+
+.fontSizeButtons {
+    display: flex;
+    margin-top: 8px;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.fontSizeButton {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    color: inherit;
+    font-weight: 700;
+    line-height: 1;
+    padding: 3px 6px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.fontSizeButton:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.fontSizeButton.active {
+    border-color: #fff;
+}
