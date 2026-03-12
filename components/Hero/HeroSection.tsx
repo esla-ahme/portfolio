@@ -11,14 +11,13 @@ const HeroSection = () => {
   return (
     <SectionContainer id="home" background="None">
       <div className="flex min-h-[calc(100vh-5rem)] items-center">
-        <div className="lg:w-2/3 px-4 mdl:px-16 flex flex-col justify-center mdl:max-w-containerSmall mt-8">
+        <div className="lg:w-2/3 flex flex-col justify-center mt-8">
           <p className="text-xl my-4">Hello there, I&apos;m</p>
           <h1 className="text-5xl mdl:text-6xl font-bold font-inter text-main">
             Eslam Ahmed
           </h1>
           <TypingWriter
             sentences={Roles}
-            loop={true}
             classes="text-2xl mdl:text-4xl"
             as="h2"
           />
@@ -95,8 +94,7 @@ const HeroSection = () => {
               className=""
             >
               <TypingWriter
-                sentences={["Open to hiring", "Check my resume"]}
-                loop={false}
+                sentences={["Open to hiring"]}
                 classes="font-light"
                 as="span"
               />
@@ -113,7 +111,9 @@ const HeroSection = () => {
               type: "tween",
             },
           }}
-          className="py-20 mr-8 m-auto hidden  lg:block "
+          data-scroll
+          data-scroll-speed="0.4"
+          className="py-20 mr-8 m-auto hidden lg:block"
         >
           <Image
             src="/images/hero.svg"

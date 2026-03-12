@@ -7,10 +7,12 @@ import HeroSection from "@/components/Hero/HeroSection";
 import Navbar from "@/components/Navbar/navbar";
 import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import Projects from "@/components/Projects/Projects";
-import { ThemeProvider, useTheme } from "@/context/themeContext";
+import { ThemeProvider } from "@/context/themeContext";
+import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 import Head from "next/head";
 
 export default function Home() {
+  useLocomotiveScroll();
   return (
     <>
       <Head>
@@ -22,7 +24,7 @@ export default function Home() {
       </Head>
       <main
         id="main"
-        className="w-full h-screen  overflow-x-hidden overflow-y-scroll font-monteserrat bg-bgDark text-textLight "
+        className="w-full overflow-x-hidden font-monteserrat bg-bgDark text-textLight"
       >
         <ThemeProvider>
           <Navbar />

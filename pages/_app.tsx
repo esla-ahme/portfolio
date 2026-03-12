@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.css";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import type { AppProps } from "next/app";
 import { Montserrat } from "next/font/google";
 

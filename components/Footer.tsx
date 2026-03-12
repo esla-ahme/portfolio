@@ -5,7 +5,9 @@ import Icons from "./Icons/Icons";
 const Footer = () => {
   return (
     <footer
+      data-scroll
       className="
+      scroll-fade
       px-4
       sm:px-8
       py-8

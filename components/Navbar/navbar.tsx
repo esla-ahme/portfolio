@@ -31,14 +31,7 @@ const Navbar = () => {
     e.stopPropagation();
     setShowSideBar(false);
     const element = document.getElementById(id.toLocaleLowerCase());
-    const main = document.getElementById("main");
-    const topOffset = element?.offsetTop;
-
-    main?.scroll({
-      behavior: "smooth",
-      left: 0,
-      top: Number(topOffset) - 40,
-    });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleKeyDown = (e: React.KeyboardEvent, id: string) => {

@@ -24,7 +24,7 @@ const SectionNavigator = ({ active, activeHandler }: Props) => {
     <nav className="w-full" aria-label="Experience sections">
       <ul className="flex   w-full gap-4    " role="tablist">
         {sectionNames.map((section, index) => (
-          <motion.li
+          <li
             key={index}
             role="tab"
             aria-selected={active === index}
@@ -64,7 +64,7 @@ const SectionNavigator = ({ active, activeHandler }: Props) => {
                 }
               </AnimatePresence>
             </span>
-          </motion.li>
+          </li>
         ))}
       </ul>
     </nav>

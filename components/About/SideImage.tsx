@@ -11,7 +11,7 @@ const SideImage = () => {
     return () => clearInterval(interval);
   }, [random]);
   return (
-    <div className="w-full lg:w-1/2 relative m-auto mt-8 ">
+    <div data-scroll className="scroll-fade-right w-full lg:w-1/2 relative m-auto mt-8">
       <motion.div
         initial={{
           borderRadius: "50% 40% 50% 60% ",

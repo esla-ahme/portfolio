@@ -2,24 +2,18 @@ import Image from "next/image";
 import React from "react";
 import EyeIcon from "./Eye";
 import Tag from "../Tag";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { IArticle } from "@/Types";
 const ArticleCard = (article: IArticle) => {
   return (
-    <motion.div
-      whileHover={{
-        y: -4,
-        transition: {
-          duration: 0.5,
-        },
-      }}
+    <div
       className="
   group
   flex flex-col justify-between
-      border border-textLight/25 rounded-md 
+      border border-textLight/25 rounded-md
       bg-textLight/5 backdrop-filter backdrop-blur-sm
       hover:border-textLight/50
+      hover:-translate-y-1 transition-transform duration-500
       "
     >
       <Image
@@ -58,7 +52,7 @@ const ArticleCard = (article: IArticle) => {
           Read More
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

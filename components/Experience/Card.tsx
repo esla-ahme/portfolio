@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { SectionData } from "./data";
 
 const Card = ({
@@ -11,8 +11,7 @@ const Card = ({
   description,
 }: SectionData) => {
   return (
-    <AnimatePresence>
-      <motion.div
+    <motion.div
         initial={{
           x: "-100",
           opacity: 0,
@@ -47,7 +46,6 @@ const Card = ({
           </ul>
         </div>
       </motion.div>
-    </AnimatePresence>
   );
 };
 

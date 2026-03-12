@@ -1,26 +1,37 @@
 import React, { useEffect } from "react";
-import { motion } from "framer-motion";
+
+/**
+ * Renders a typewriter animation that cycles through an array of sentences.
+ * Behavior is derived from the array length:
+ * - Multiple sentences → cycles through all with delete-and-retype effect.
+ * - Single sentence → types once and stops.
+ *
+ * @param sentences - List of strings to type out in sequence.
+ * @param classes - Additional Tailwind classes applied to the wrapper element.
+ * @param as - HTML tag to render as. Defaults to `h3`.
+ */
 interface TypingWriterProps {
   sentences: string[];
-  loop: boolean;
   classes?: string;
   as?: keyof JSX.IntrinsicElements;
 }
 
-const TypingWriter = ({ sentences, loop, classes, as: Tag = "h3" }: TypingWriterProps) => {
+const TypingWriter = ({ sentences, classes, as: Tag = "h3" }: TypingWriterProps) => {
+  const loop = sentences.length > 1;
   const [index, setIndex] = React.useState(0);
   const [currentLetter, setCurrentLetter] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
   const [speed, setSpeed] = React.useState(100);
-  const [looping, setLooping] = React.useState(loop);
+  const [done, setDone] = React.useState(false);
 
   useEffect(() => {
-    // typeWriter effect
+    if (done) return;
+
     const timeOut = setTimeout(() => {
       if (isDeleting) {
         setSpeed(50);
         if (currentLetter.length > 0) {
-          setCurrentLetter(currentLetter.slice(0, currentLetter.length - 1));
+          setCurrentLetter(currentLetter.slice(0, -1));
         } else {
           setIsDeleting(false);
           setIndex((index + 1) % sentences.length);
@@ -28,27 +39,21 @@ const TypingWriter = ({ sentences, loop, classes, as: Tag = "h3" }: TypingWriter
       } else {
         if (currentLetter.length < sentences[index].length) {
           setCurrentLetter(sentences[index].slice(0, currentLetter.length + 1));
-        } else {
-          setSpeed(4000);
+        } else if (loop) {
+          setSpeed(2000);
           setIsDeleting(true);
+        } else {
+          setDone(true);
         }
       }
     }, speed);
-    return () => {
-      clearTimeout(timeOut);
-    };
-  }, [currentLetter, index, isDeleting, sentences, speed]);
+    return () => clearTimeout(timeOut);
+  }, [currentLetter, done, index, isDeleting, loop, sentences, speed]);
+
   return (
     <Tag className={`my-4 font-semibold ${classes}`}>
-      {currentLetter || ""}
-      <motion.span
-        animate={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-        className="text-main font-light"
-      >
-        |
-      </motion.span>
+      {currentLetter}
+      <span className="cursor-blink text-main font-light">|</span>
     </Tag>
   );
 };

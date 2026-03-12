@@ -11,7 +11,7 @@ const Contact = () => {
       background="None"
     >
       <div className="max-w-[600px]">
-        <p className="text-textLight/75 mb-4">
+        <p data-scroll className="scroll-fade-up text-textLight/75 mb-4">
           I&apos;m always excited to connect with fellow professionals and
           explore new opportunities. Whether you have a project idea, a job
           opportunity, or just want to say hello, don&apos;t hesitate to reach
@@ -22,7 +22,7 @@ const Contact = () => {
           either drop me an email or take a look at my resume to learn more
           about my background and skills.
         </p>
-        <div className="flex items-center m-auto justify-center gap-4 max-w-[400px]">
+        <div data-scroll className="scroll-fade-up scroll-delay-1 flex items-center m-auto justify-center gap-4 max-w-[400px]">
           <Link
             className="w-full p-2 flex items-center justify-center gap-2 bg-main mt-4  "
             type="download"
@@ -42,7 +42,7 @@ const Contact = () => {
             <span className="text-textLight font-semibold">Email Me</span>
           </Link>
         </div>
-        <p className="mt-6 font-semibold">
+        <p data-scroll className="scroll-fade-up scroll-delay-2 mt-6 font-semibold">
           Let&apos;s start a conversation and explore how we can work together!
         </p>
       </div>

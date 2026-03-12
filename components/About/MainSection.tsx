@@ -32,7 +32,7 @@ function MainSection() {
 function IntroductionSection() {
   return (
     <div className="space-y-4">
-      <p className="font-light text-bgAccent/75">
+      <p data-scroll className="scroll-fade-up font-light text-bgAccent/75">
         Hi, I&apos;m Eslam Ahmed, a{" "}
         <span className="font-semibold text-textLight mdl:text-mdl">
           Frontend Engineer
@@ -56,7 +56,7 @@ function IntroductionSection() {
         </span>{" "}
         for automating migration of millions of records.
       </p>
-      <p className="font-light text-bgAccent/75">
+      <p data-scroll className="scroll-fade-up scroll-delay-1 font-light text-bgAccent/75">
         I specialize in building scalable web platforms, optimizing UI/UX, and
         integrating modern technologies like{" "}
         <span className="font-semibold text-textLight">
@@ -72,13 +72,13 @@ function IntroductionSection() {
         </span>
         .
       </p>
-      <p className="font-light text-bgAccent/75">
+      <p data-scroll className="scroll-fade-up scroll-delay-2 font-light text-bgAccent/75">
         My journey began in 2017 when I wrote my first &apos;Hello World&apos;
         in good old &apos;C.&apos; Since then, I&apos;ve worked with a variety
         of technologies, always striving to learn, achieve perfection, and pay
         attention to the finer details.
       </p>
-      <p className="font-light text-bgAccent/75">
+      <p data-scroll className="scroll-fade-up scroll-delay-3 font-light text-bgAccent/75">
         <strong>Some technologies I enjoy working with:</strong>
       </p>
     </div>
@@ -87,7 +87,7 @@ function IntroductionSection() {
 
 function TechList() {
   return (
-    <ul className="tech flex flex-wrap mt-4">
+    <ul data-scroll className="scroll-fade-up scroll-delay-4 tech flex flex-wrap mt-4">
       {tech.map((tech, index) => (
         <li
           key={index + tech}

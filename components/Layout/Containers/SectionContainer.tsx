@@ -26,13 +26,15 @@ const SectionContainer: React.FC<Props> = ({
   return (
     <section
       id={id}
-      className={` p-4 mdl:p-8 w-full text-textLight ${classes[background]} `}
+      className={`p-4 mdl:p-8 w-full text-textLight ${classes[background]}`}
       style={{
         minHeight: "calc(100vh - 5rem)",
       }}
     >
-      {title && <SectionTitle title={title} />}
-      {children}
+      <div className="max-w-contentContainer mx-auto w-full">
+        {title && <SectionTitle title={title} />}
+        {children}
+      </div>
     </section>
   );
 };
